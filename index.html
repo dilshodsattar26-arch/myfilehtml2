@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio 2</title>
+    <style>
+        :root { --primary: #ff6b6b; --dark: #2d3436; --light: #dfe6e9; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background: var(--dark); color: var(--light); font-family: 'Georgia', serif; }
+        nav { padding: 20px 40px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #444; }
+        nav .logo { font-size: 1.5em; color: var(--primary); font-weight: 700; }
+        nav ul { display: flex; list-style: none; gap: 30px; }
+        nav a { color: var(--light); text-decoration: none; transition: color 0.3s; }
+        nav a:hover { color: var(--primary); }
+        .gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 20px; padding: 40px; }
+        .gallery-item {
+            position: relative;
+            height: 250px;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.4s;
+        }
+        .gallery-item:hover { transform: scale(1.03); }
+        .gallery-item .overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            padding: 20px;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+        }
+        .gallery-item:nth-child(1) { background: linear-gradient(45deg, #ff6b6b, #feca57); }
+        .gallery-item:nth-child(2) { background: linear-gradient(45deg, #48dbfb, #0abde3); }
+        .gallery-item:nth-child(3) { background: linear-gradient(45deg, #ff9ff3, #f368e0); }
+        .gallery-item:nth-child(4) { background: linear-gradient(45deg, #54a0ff, #2e86de); }
+        .gallery-item:nth-child(5) { background: linear-gradient(45deg, #5f27cd, #341f97); }
+        .gallery-item:nth-child(6) { background: linear-gradient(45deg, #01a3a4, #00d2d3); }
+        .about { padding: 60px 40px; text-align: center; }
+        .about h2 { font-size: 2em; margin-bottom: 20px; color: var(--primary); }
+        .about p { max-width: 700px; margin: 0 auto; line-height: 1.8; opacity: 0.8; }
+        .skills { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; padding: 0 40px 60px; }
+        .skill { background: #444; padding: 8px 20px; border-radius: 20px; font-size: 0.9em; }
+    </style>
+</head>
+<body>
+    <nav><div class="logo">Portfolio #2</div><ul><li><a href="#">Bosh sahifa</a></li><li><a href="#">Ishlar</a></li><li><a href="#">Aloqa</a></li></ul></nav>
+    <div class="gallery">
+        <div class="gallery-item"><div class="overlay"><h3>Loyiha A</h3><p>Web dizayn</p></div></div>
+        <div class="gallery-item"><div class="overlay"><h3>Loyiha B</h3><p>Mobil ilova</p></div></div>
+        <div class="gallery-item"><div class="overlay"><h3>Loyiha C</h3><p>Branding</p></div></div>
+        <div class="gallery-item"><div class="overlay"><h3>Loyiha D</h3><p>UI/UX</p></div></div>
+        <div class="gallery-item"><div class="overlay"><h3>Loyiha E</h3><p>Grafika</p></div></div>
+        <div class="gallery-item"><div class="overlay"><h3>Loyiha F</h3><p>Animatsiya</p></div></div>
+    </div>
+    <section class="about">
+        <h2>Men haqimda</h2>
+        <p>Professional web developer va dizayner. 2+ loyiha tajribasi bilan sifatli yechimlar taqdim etaman.</p>
+    </section>
+    <div class="skills">
+        <span class="skill">HTML5</span><span class="skill">CSS3</span><span class="skill">JavaScript</span>
+        <span class="skill">React</span><span class="skill">Node.js</span><span class="skill">Python</span>
+        <span class="skill">Figma</span><span class="skill">Git</span>
+    </div>
+</body>
+</html>
